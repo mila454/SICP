@@ -1,0 +1,7 @@
+(define (solution a b c)
+ (cond ((and (not (> a  b)) (not (> a c))) 
+                  (+ (* b b) (* c c)))
+      ((and (not (> b  a)) (not (> b c))) 
+                  (+ (* c c) (* a a)))
+       (else (+ (* b b) (* a a))) 
+))
