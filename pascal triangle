@@ -1,0 +1,6 @@
+(define (solution row col)
+  (cond ((= row col) 1)
+        ((= col 1) 1)
+        ((> col row) 0)
+        (else (+ (solution (- row 1) (- col 1)) 
+                           (solution (- row 1) col))))) 
