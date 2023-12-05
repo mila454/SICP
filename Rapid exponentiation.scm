@@ -5,14 +5,11 @@
         (else (* b (solution b (- n 1))))))
 
 (define (even? n)
-  (= (reminder n 2) 0))
+  (= (remainder n 2) 0))
 
 (define (squire a)
   (* a a))
 
-(define (reminder n m)
-  (- n (* m (floor (/ n m)))))
-(check-equal? (solution 10 0) 1)
 
 ;;V2
 (define (solution b n)
